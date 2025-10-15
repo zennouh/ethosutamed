@@ -1,10 +1,8 @@
+@use 'variables';
 /* select all html element o the page */
 @font-face {
   font-family: Orbitron;
-  src: url(/assets/fonts/Orbitron-VariableFont_wght.ttf) format("truetype");
-}
-:root {
-  --mainColor: green;
+  src: url(/assets/fonts/Orbitron-VariableFont_wght.ttf) format('truetype');
 }
 
 * {
@@ -21,21 +19,9 @@ html {
 }
 
 body {
-  background-image: url("/assets/images/bg.webp");
+  background-image: url('/assets/images/bg.webp');
 }
 
-/* img {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-}
-
-div.bg-image::after {
-  content: "t";
-  height: 100vh;
-  width: 100vw;
-  color: black;
-} */
 .bg-color {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -45,17 +31,15 @@ div.bg-image::after {
   width: 100vw;
   height: 100vh;
 }
-
 .code {
   position: relative;
-  color: var(--mainColor);
+  color: variables.$mainColor;
 }
-
 .code::before {
-  content: "";
+  content: '';
   /* border-end-end-radius: 2px;
   corner-shape: bevel; */
-  background-color: var(--mainColor);
+  background-color: variables.$mainColor;
   display: inline-block;
   height: 10px;
   width: 10px;
@@ -65,13 +49,13 @@ div.bg-image::after {
 .subTitle {
   color: white;
   text-indent: 25px;
-}
-.subTitle span {
-  background-color: var(--mainColor);
-  padding: 2px;
-  border-radius: 0 5px 0 0;
-  /* corner-shape: superellipse(0.5) bevel notch squircle; */
-  font-weight: bold;
+  span {
+    background-color: variables.$mainColor;
+    padding: 2px;
+    border-radius: 0 5px 0 0;
+    /* corner-shape: superellipse(0.5) bevel notch squircle; */
+    font-weight: bold;
+  }
 }
 
 main {
@@ -85,15 +69,15 @@ main {
 .loading {
   width: 40%;
   margin: auto;
-}
-.loading .per {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
-.loading .per .title {
-  font-size: 26.31px;
-  font-weight: 400;
+  .per {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    .title {
+      font-size: 26.31px;
+      font-weight: 400;
+    }
+  }
 }
 
 .percent {
@@ -106,7 +90,6 @@ main {
   font-weight: 400;
   color: rgba(255, 255, 255, 0.61);
 }
-
 .progressBar {
   background-color: rgba(255, 255, 255, 0.19);
   height: 8px;
@@ -115,19 +98,20 @@ main {
 }
 
 .progress {
-  background-color: var(--mainColor);
+  background-color: variables.$mainColor;
   width: 40%;
   height: 8px;
   border-radius: 10px;
 }
-
 .selection {
   margin-top: 50px;
   display: flex;
   justify-content: space-evenly;
-}
-.selection .characters .options {
-  display: flex;
+  .characters {
+    .options {
+      display: flex;
+    }
+  }
 }
 
 .characters .selected img {
@@ -137,8 +121,9 @@ main {
 }
 
 .characters .selected::before {
-  content: "<";
+  content: '<';
   text-align: center;
+
   position: relative;
   top: 75px;
   left: -40px;
@@ -150,8 +135,9 @@ main {
 }
 
 .characters .selected::after {
-  content: ">";
+  content: '>';
   text-align: center;
+
   position: relative;
   top: -75px;
   left: 110px;
@@ -166,7 +152,6 @@ main {
   width: 70px;
   height: 70px;
 }
-
 .details {
   width: 50%;
 }
@@ -179,9 +164,9 @@ main {
   font-size: 10px;
   font-weight: 400;
 }
-
 .char-info div:nth-child(2) {
-  background-color: var(--mainColor);
+  background-color: variables.$mainColor;
+
   padding: 3px;
   border-radius: 0 20px 0 0;
   corner-shape: bevel;
@@ -194,7 +179,6 @@ main {
   font-size: 48px;
   font-weight: 400;
 }
-
 .char-info div:nth-child(4) {
   font-size: 10px;
   font-weight: 400;
@@ -208,7 +192,7 @@ main {
 
 .details .choose {
   margin: 10px;
-  background-color: var(--mainColor);
+  background-color: variables.$mainColor;
   display: inline-block;
   padding: 15px;
   border-radius: 10px;
@@ -216,4 +200,4 @@ main {
 
 .choose a {
   text-decoration: none;
-}/*# sourceMappingURL=character.css.map */
+}

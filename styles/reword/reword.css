@@ -1,0 +1,182 @@
+@font-face {
+  font-family: Orbitron;
+  src: url(/assets/fonts/Orbitron-VariableFont_wght.ttf) format("truetype");
+}
+* {
+  box-sizing: border-box;
+  color: white;
+  margin: 0;
+  padding: 0;
+  font-family: Orbitron;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/assets/images/bg.webp");
+}
+
+.bg-color {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
+  padding: 30px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.code {
+  position: relative;
+  color: rgb(255, 255, 0);
+}
+
+.code::before {
+  content: "";
+  background-color: rgb(255, 255, 0);
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-right: 3px;
+}
+
+.subTitle {
+  color: white;
+  text-indent: 25px;
+}
+.subTitle span {
+  background-color: rgb(255, 255, 0);
+  padding: 2px;
+  border-radius: 0 5px 0 0;
+  font-weight: bold;
+}
+
+.loading {
+  width: 40%;
+  margin: auto;
+}
+.loading .per {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.loading .per .title {
+  font-size: 26.31px;
+  font-weight: 400;
+}
+.loading .per .percent {
+  font-size: 50.98px;
+  font-weight: 400;
+}
+.loading .per .encode {
+  font-size: 16.45px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.61);
+}
+.loading .progressBar {
+  background-color: rgba(255, 255, 255, 0.19);
+  height: 8px;
+  width: 100%;
+  border-radius: 10px;
+}
+.loading .progressBar .progress {
+  background-color: rgb(255, 255, 0);
+  width: 40%;
+  height: 8px;
+  border-radius: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #eaeaea;
+  margin-top: 40px;
+}
+
+.content {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+.content p {
+  font-size: 24px;
+  width: 80%;
+  text-align: center;
+}
+.content .cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+}
+.content .cards .card {
+  border: 1px solid white;
+  border-radius: 20px;
+  margin: 20px 0;
+  height: 250px;
+  width: 15%;
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .cards .card .frame {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+}
+.content .cards .card .frame img {
+  height: 60px;
+  width: 60px;
+}
+.content .cards .card p {
+  height: 40%;
+  font-size: 13px;
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 30px;
+}
+.btns .bevel {
+  border: 1px solid white;
+  corner-shape: bevel;
+  padding: 10px;
+}
+.btns .share {
+  border-bottom-right-radius: 10px;
+}
+.btns .generate {
+  border-top-right-radius: 10px;
+}
+
+.share:hover {
+  display: block;
+}
+
+.generate {
+  border-top-right-radius: 10px;
+}
+
+.dialog {
+  display: block;
+  width: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translateX(-50%);
+}
+
+/*# sourceMappingURL=reword.css.map */

@@ -1,11 +1,11 @@
-@use 'sass/variables';
+@use "../variables";
 
 .code {
   position: relative;
   color: variables.$mainColor;
 }
 .code::before {
-  content: '';
+  content: "";
   background-color: variables.$mainColor;
   display: inline-block;
   height: 10px;

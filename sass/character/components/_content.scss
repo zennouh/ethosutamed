@@ -1,0 +1,95 @@
+@use "../variables";
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid #eaeaea;
+  margin-top: 40px;
+}
+
+.selection {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  .characters {
+    .options {
+      display: flex;
+      img {
+        width: 70px;
+        height: 70px;
+      }
+    }
+    .selected img {
+      width: 100px;
+      height: 150px;
+      position: relative;
+    }
+    .selected::before {
+      content: "<";
+      text-align: center;
+      position: relative;
+      top: 75px;
+      left: -40px;
+      height: 30px;
+      width: 30px;
+      transform: translateY(15px);
+      display: block;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    .selected::after {
+      content: ">";
+      text-align: center;
+      position: relative;
+      top: -75px;
+      left: 110px;
+      height: 30px;
+      width: 30px;
+      transform: translateY(-20px);
+      display: block;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+  }
+  .details {
+    width: 50%;
+    .description {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.7;
+    }
+    .choose {
+      margin: 10px;
+      background-color: variables.$mainColor;
+      display: inline-block;
+      padding: 15px;
+      border-radius: 10px;
+      a {
+        text-decoration: none;
+      }
+    }
+    .char-info {
+      color: white;
+      div:nth-child(1) {
+        font-size: 10px;
+        font-weight: 400;
+      }
+      div:nth-child(2) {
+        background-color: variables.$mainColor;
+        padding: 3px;
+        border-radius: 0 20px 0 0;
+        corner-shape: bevel;
+        color: black;
+        font-weight: 700;
+      }
+      div:nth-child(3) {
+        margin-top: 5px;
+        font-size: 48px;
+        font-weight: 400;
+      }
+      div:nth-child(4) {
+        font-size: 10px;
+        font-weight: 400;
+      }
+    }
+  }
+}

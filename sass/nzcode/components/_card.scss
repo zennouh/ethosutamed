@@ -1,0 +1,26 @@
+@use "../variables/paddings" as p;
+@use "../variables/border" as b;
+@use "../variables/fontsize" as fs;
+@use "sass:math";
+
+.card {
+  display: block;
+  padding: p.$padding;
+  border-radius: math.div(b.$border-raduis, 4);
+  border: b.$border-thikness solid #ddd;
+  box-shadow: b.$box-shadow;
+  .card-title {
+    font-size: fs.$font-size-lg;
+    padding-bottom: p.$padding;
+    font-weight: bold;
+  }
+  .card-body {
+    font-size: fs.$font-size;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+// for log message in console
+@debug math.div(b.$border-raduis, 4);

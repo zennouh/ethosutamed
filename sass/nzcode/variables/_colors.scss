@@ -1,0 +1,77 @@
+@use "sass:color";
+@use "sass:map";
+
+// variables
+$mainColor: blue;
+$secondColor: black;
+$successColor: green;
+$errorColor: red;
+$info: yellow;
+
+// map in scss
+$colors: (
+  "primary": $mainColor,
+  "secondary": $secondColor,
+  "success": $successColor,
+  "error": $errorColor,
+  "info": $info,
+  "white": white,
+);
+
+// generate selectors from color palette
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+
+  .bg-#{$key} {
+    background-color: $value;
+  }
+
+  @if ($value != white and $value != black) {
+    /// generate dark, light color for text and bg
+    @for $i from 1 through 9 {
+      /// light
+      .text-#{$key}-light-#{$i} {
+        color: color.mix(white, $value, $i * 10%);
+      }
+      .text-hover-#{$key}-light-#{$i} {
+        &:hover {
+          color: color.mix(white, $value, $i * 10%);
+        }
+      }
+
+      .bg-#{$key}-light-#{$i} {
+        background-color: color.mix(white, $value, $i * 10%);
+      }
+      /// dark
+      .text-#{$key}-dark-#{$i} {
+        color: color.mix(black, $value, $i * 10%);
+        &:hover {
+          color: $value;
+        }
+      }
+      .text-hover-#{$key}-dark-#{$i} {
+        &:hover {
+          color: color.mix(black, $value, $i * 10%);
+        }
+      }
+      .bg-#{$key}-dark-#{$i} {
+        background-color: color.mix(black, $value, $i * 10%);
+      }
+    }
+  } @else {
+    @debug $value;
+  }
+}
+
+// @debug map.get($colors, "primary"); // get the value
+// @debug map-has-key($colors, "trial"); // return bool
+// @debug map-remove($colors, "primary"); // return map
+// // add element to map
+// @debug map-merge(
+//   $colors,
+//   (
+//     "blue": blue,
+//   )
+// );

@@ -1,8 +1,8 @@
-@use '../variables/paddings' as p;
-@use '../variables/border' as b;
-@use '../variables/fontsize' as fs;
-@use 'sass:math';
-@use 'sass:color';
+@use "../variables/paddings" as p;
+@use "../variables/border" as b;
+@use "../variables/fontsize" as fs;
+@use "sass:math";
+@use "sass:color";
 
 @function lightColor($color, $deg) {
   @if ($deg >= 1 and $deg <= 9) {
@@ -11,6 +11,7 @@
     @return white;
   }
 }
+
 @mixin cardProps($padding, $borderRaduis, $thikness, $shadow) {
   display: block;
   padding: $padding;

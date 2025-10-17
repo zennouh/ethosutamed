@@ -1,5 +1,5 @@
-@use "sass:color";
-@use "sass:map";
+@use 'sass:color';
+@use 'sass:map';
 
 // variables
 $mainColor: blue;
@@ -10,12 +10,12 @@ $info: yellow;
 
 // map in scss
 $colors: (
-  "primary": $mainColor,
-  "secondary": $secondColor,
-  "success": $successColor,
-  "error": $errorColor,
-  "info": $info,
-  "white": white,
+  'primary': $mainColor,
+  'secondary': $secondColor,
+  'success': $successColor,
+  'error': $errorColor,
+  'info': $info,
+  'white': white,
 );
 
 // generate selectors from color palette

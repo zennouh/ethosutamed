@@ -1,4 +1,4 @@
-@use "../variables";
+@use '../variables';
 
 main {
   display: flex;
@@ -20,34 +20,36 @@ main {
         height: 70px;
       }
     }
-    .selected img {
-      width: 100px;
-      height: 150px;
-      position: relative;
-    }
-    .selected::before {
-      content: "<";
-      text-align: center;
-      position: relative;
-      top: 75px;
-      left: -40px;
-      height: 30px;
-      width: 30px;
-      transform: translateY(15px);
-      display: block;
-      border: 1px solid rgba(255, 255, 255, 0.6);
-    }
-    .selected::after {
-      content: ">";
-      text-align: center;
-      position: relative;
-      top: -75px;
-      left: 110px;
-      height: 30px;
-      width: 30px;
-      transform: translateY(-20px);
-      display: block;
-      border: 1px solid rgba(255, 255, 255, 0.6);
+    .selected {
+      img {
+        width: 100px;
+        height: 150px;
+        position: relative;
+      }
+      &::before {
+        content: '<';
+        text-align: center;
+        position: relative;
+        top: 75px;
+        left: -40px;
+        height: 30px;
+        width: 30px;
+        transform: translateY(15px);
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+      &::after {
+        content: '>';
+        text-align: center;
+        position: relative;
+        top: -75px;
+        left: 110px;
+        height: 30px;
+        width: 30px;
+        transform: translateY(-20px);
+        display: block;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
     }
   }
   .details {
@@ -67,7 +69,7 @@ main {
         text-decoration: none;
       }
     }
-    .char-info {
+    div.char-info {
       color: white;
       div:nth-child(1) {
         font-size: 10px;

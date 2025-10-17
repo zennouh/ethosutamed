@@ -1,14 +1,32 @@
-@use "../variables/paddings" as p;
-@use "../variables/border" as b;
-@use "../variables/fontsize" as fs;
-@use "sass:math";
+@use '../variables/paddings' as p;
+@use '../variables/border' as b;
+@use '../variables/fontsize' as fs;
+@use 'sass:math';
+@use 'sass:color';
+
+@function lightColor($color, $deg) {
+  @if ($deg >= 1 and $deg <= 9) {
+    @return color.mix(white, $color, $deg * 10%);
+  } @else {
+    @return white;
+  }
+}
+@mixin cardProps($padding, $borderRaduis, $thikness, $shadow) {
+  display: block;
+  padding: $padding;
+  border-radius: math.div($borderRaduis, 4);
+  border: $thikness solid #ddd;
+  box-shadow: $shadow;
+  background-color: lightColor(red, 5);
+}
 
 .card {
-  display: block;
-  padding: p.$padding;
-  border-radius: math.div(b.$border-raduis, 4);
-  border: b.$border-thikness solid #ddd;
-  box-shadow: b.$box-shadow;
+  @include cardProps(
+    p.$padding,
+    b.$border-raduis,
+    b.$border-thikness,
+    b.$box-shadow
+  );
   .card-title {
     font-size: fs.$font-size-lg;
     padding-bottom: p.$padding;

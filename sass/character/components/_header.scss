@@ -1,16 +1,16 @@
-@use "../variables";
+@use '../variables';
 
 .code {
   position: relative;
   color: variables.$mainColor;
-}
-.code::before {
-  content: "";
-  background-color: variables.$mainColor;
-  display: inline-block;
-  height: 10px;
-  width: 10px;
-  margin-right: 3px;
+  &:before {
+    content: '';
+    background-color: variables.$mainColor;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin-right: 3px;
+  }
 }
 
 .subTitle {

@@ -1034,6 +1034,7 @@ html {
   border-radius: 5px;
   border: 2px solid #ddd;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgb(255, 127.5, 127.5);
 }
 .card .card-title {
   font-size: 1.5rem;

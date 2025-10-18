@@ -1,8 +1,9 @@
-@use "../variables/paddings" as p;
-@use "../variables/border" as b;
-@use "../variables/fontsize" as fs;
-@use "sass:math";
-@use "sass:color";
+@use '../variables/paddings' as p;
+@use '../variables/border' as b;
+@use '../variables/fontsize' as fs;
+@use '../breakpoints' as bpo;
+@use 'sass:math';
+@use 'sass:color';
 
 @function lightColor($color, $deg) {
   @if ($deg >= 1 and $deg <= 9) {
@@ -22,12 +23,15 @@
 }
 
 .card {
-  @include cardProps(
-    p.$padding,
-    b.$border-raduis,
-    b.$border-thikness,
-    b.$box-shadow
-  );
+  @include bpo.md {
+    @include cardProps(
+      p.$padding,
+      b.$border-raduis,
+      b.$border-thikness,
+      b.$box-shadow
+    );
+  }
+
   .card-title {
     font-size: fs.$font-size-lg;
     padding-bottom: p.$padding;

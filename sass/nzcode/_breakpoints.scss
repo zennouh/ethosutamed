@@ -1,35 +1,35 @@
-@use "sass:get";
+@use 'sass:map';
 
 $breakpointe: (
-  "xs": 0,
-  "sm": 480px,
-  "md": 720px,
-  "lg": 960px,
-  "xl": 1200px,
+  'xs': 0,
+  'sm': 480px,
+  'md': 720px,
+  'lg': 960px,
+  'xl': 1200px,
 );
 
 @mixin xs {
-  @media (min-width: get.map($breakpointe, "xs")) {
+  @media (min-width: map.get($breakpointe, 'xs')) {
     @content;
   }
 }
 @mixin sm {
-  @media (min-width: get.map($breakpointe, "sm")) {
+  @media (min-width: map.get($breakpointe, 'sm')) {
     @content;
   }
 }
 @mixin md {
-  @media (min-width: get.map($breakpointe, "md")) {
+  @media (min-width: map.get($breakpointe, 'md')) {
     @content;
   }
 }
 @mixin lg {
-  @media (min-width: get.map($breakpointe, "lg")) {
+  @media (min-width: map.get($breakpointe, 'lg')) {
     @content;
   }
 }
 @mixin xl {
-  @media (min-width: get.map($breakpointe, "xl")) {
+  @media (min-width: map.get($breakpointe, 'xl')) {
     @content;
   }
 }

@@ -1,45 +1,45 @@
-@use "variables/paddings" as p;
-@use "sass:map";
+@use 'variables/paddings' as p;
+@use 'sass:map';
 
 // we can use paddig-right, top, bottom, margin...
 $utilities: (
-  "padding": (
-    "prefix": "p",
-    "values": (
-      "0": 0,
-      "1": p.$padding,
-      "2": p.$padding * 2,
-      "3": p.$padding * 4,
-      "4": p.$padding * 6,
-      "5": p.$padding * 8,
+  'padding': (
+    'prefix': 'p',
+    'values': (
+      '0': 0,
+      '1': p.$padding,
+      '2': p.$padding * 2,
+      '3': p.$padding * 4,
+      '4': p.$padding * 6,
+      '5': p.$padding * 8,
     ),
   ),
-  "padding-left": (
-    "prefix": "pl",
-    "values": (
-      "0": 0,
-      "1": p.$padding,
-      "2": p.$padding * 2,
-      "3": p.$padding * 4,
-      "4": p.$padding * 6,
-      "5": p.$padding * 8,
+  'padding-left': (
+    'prefix': 'pl',
+    'values': (
+      '0': 0,
+      '1': p.$padding,
+      '2': p.$padding * 2,
+      '3': p.$padding * 4,
+      '4': p.$padding * 6,
+      '5': p.$padding * 8,
     ),
   ),
-  "display": (
-    "prefix": "display",
-    "values": (
-      "n": none,
-      "b": block,
-      "f": flex,
-      "i": inline,
-      "i-b": inline-block,
+  'display': (
+    'prefix': 'display',
+    'values': (
+      'n': none,
+      'b': block,
+      'f': flex,
+      'i': inline,
+      'i-b': inline-block,
     ),
   ),
 );
 // generate utilities classes
 @each $k, $v in $utilities {
-  $prefix: map.get($v, "prefix"); // p
-  $values: map.get($v, "values"); // (...)
+  $prefix: map.get($v, 'prefix'); // p
+  $values: map.get($v, 'values'); // (...)
   @each $n, $pad in $values {
     .#{$prefix}-#{$n} {
       #{$k}: $pad;

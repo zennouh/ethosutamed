@@ -114,8 +114,6 @@ main {
   gap: 25px;
 }
 .content .cards .card {
-  border: 1px solid white;
-  border-radius: 20px;
   margin: 20px 0;
   height: 250px;
   width: 15%;
@@ -131,11 +129,11 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60%;
+  height: 70%;
 }
 .content .cards .card .frame img {
-  height: 60px;
-  width: 60px;
+  height: 190px;
+  width: 120px;
 }
 .content .cards .card p {
   height: 40%;
@@ -193,4 +191,4 @@ main {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/*# sourceMappingURL=reword.css.map */
+/*# sourceMappingURL=result.css.map */
